@@ -7,28 +7,7 @@ import "./App.css";
 import NotesList from "./components/NotesList";
 
 function App() {
-  const [notes, setNotes] = useState([
-    {
-      id: uuidv4(),
-      text: "This is my first note",
-      date: "25/01/2023",
-    },
-    {
-      id: uuidv4(),
-      text: "This is my second note",
-      date: "25/01/2023",
-    },
-    {
-      id: uuidv4(),
-      text: "This is my third note",
-      date: "25/01/2023",
-    },
-    {
-      id: uuidv4(),
-      text: "This is my fourth note",
-      date: "25/01/2023",
-    },
-  ]);
+  const [notes, setNotes] = useState([]);
 
   useEffect(() => {
     const allNotes = JSON.parse(window.localStorage.getItem("allNotes"));
