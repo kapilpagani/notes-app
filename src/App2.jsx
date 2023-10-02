@@ -50,7 +50,7 @@ export default function App2() {
     return (
       <>
       <Header />
-        <form ref={form} onSubmit={(e) => onSubmitForm(e)} className='container'>
+        <form ref={form} onSubmit={(e) => onSubmitForm(e)} className='container col-md-9'>
   {/* <div className="form-group">
     <label for="exampleFormControlInput1">Email address</label>
     <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={answers.question1}/>
@@ -251,7 +251,10 @@ export default function App2() {
 
 
   {/* <button  className="btn btn-primary" onSubmit={(e) =>onSubmitForm(e)}>Save</button> */}
+  <div class="text-center">
   <input type="submit" value="Submit"  className='btn btn-primary mt-4' />
+</div>
+  
 
 </form>
 </>
