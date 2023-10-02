@@ -1,13 +1,28 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
+
 
 export default function App2() {
   let navigate = useNavigate();
+  const form = useRef();
 
     const [answers, setAnswers] = useState({
         question1: '',
         question2: '',
         question3: '',
+        question4: '',
+        question5: '',
+        question6: '',
+        question7: '',
+        question8: '',
+        question9: '',
+        question10: '',
+        question11: '',
+        question12: '',
+        question13: '',
+        question14: '',
+        question15: '',
     })
 
     const handleChange = (event) => {
@@ -20,12 +35,19 @@ export default function App2() {
     const onSubmitForm = (event) => {
       event.preventDefault();
         console.log(answers);
+        emailjs.sendForm('service_cqibb8u', 'template_a8hiqmd', form.current, '3JRMenFFDFGdapZP5')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  
+
         navigate('success')
     }
 
     return (
-    <div className='container'>
-        <form onSubmit={(e) => onSubmitForm(e)}>
+        <form ref={form} onSubmit={(e) => onSubmitForm(e)} className='container'>
   {/* <div className="form-group">
     <label for="exampleFormControlInput1">Email address</label>
     <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={answers.question1}/>
@@ -65,6 +87,70 @@ export default function App2() {
       </div>
     </div>
   </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Age</legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question4" id="gridRadios1" value="option1" checked={answers.question4 === 'option1'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios1">
+          20-30
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question4" id="gridRadios2" value="option2" checked={answers.question4 === 'option2'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios2">
+          31-40 
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question4" id="gridRadios3" value="option3" checked={answers.question4 === 'option3'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          41-50 
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question4" id="gridRadios3" value="option4" checked={answers.question4 === 'option4'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          Above 51 
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Caste</legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question5" id="gridRadios1" value="option1" checked={answers.question5 === 'option1'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios1">
+          General
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question5" id="gridRadios2" value="option2" checked={answers.question5 === 'option2'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios2">
+          SC
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question5" id="gridRadios3" value="option3" checked={answers.question5 === 'option3'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          ST
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question5" id="gridRadios3" value="option4" checked={answers.question5 === 'option4'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          OBC 
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
   {/* 
   <div className="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
@@ -97,8 +183,6 @@ export default function App2() {
 
 </form>
 
-{/* <input type="submit" value="Submit"  className='btn btn-primary' onSubmit={(e) => onSubmitForm(e)}/> */}
         
-    </div>
   )
 }
