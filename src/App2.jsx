@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function App2() {
+  let navigate = useNavigate();
 
     const [answers, setAnswers] = useState({
         question1: '',
@@ -17,7 +19,8 @@ export default function App2() {
 
     const onSubmitForm = (event) => {
       event.preventDefault();
-        console.log(answers)
+        console.log(answers);
+        navigate('success')
     }
 
     return (
