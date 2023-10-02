@@ -8,6 +8,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import SuccessForm from "./SuccessForm";
+import ContactForm from "./ContactForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/success",
     element: <SuccessForm />,
+  },
+  {
+    path: "/contact",
+    element: <ContactForm />,
   },
 ]);
 root.render(
