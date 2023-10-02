@@ -35,12 +35,12 @@ export default function App2() {
     const onSubmitForm = (event) => {
       event.preventDefault();
         console.log(answers);
-        emailjs.sendForm('service_cqibb8u', 'template_a8hiqmd', form.current, '3JRMenFFDFGdapZP5')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+      //   emailjs.sendForm('service_cqibb8u', 'template_a8hiqmd', form.current, '3JRMenFFDFGdapZP5')
+      // .then((result) => {
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
   
 
         navigate('success')
@@ -146,6 +146,75 @@ export default function App2() {
           <input className="form-check-input" type="radio" name="question5" id="gridRadios3" value="option4" checked={answers.question5 === 'option4'} onChange={(e) => handleChange(e)}/>
           <label className="form-check-label" htmlFor="gridRadios3">
           OBC 
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Marital status </legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question6" id="gridRadios1" value="option1" checked={answers.question6 === 'option1'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios1">
+          Married
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question6" id="gridRadios2" value="option2" checked={answers.question6 === 'option2'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios2">
+          Unmarried
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question6" id="gridRadios3" value="option3" checked={answers.question6 === 'option3'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          Widow/ divorced
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Education qualification :</legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios1" value="option1" checked={answers.question7 === 'option1'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios1">
+          Primary 
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios2" value="option2" checked={answers.question7 === 'option2'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios2">
+          Secondary
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios3" value="option3" checked={answers.question7 === 'option3'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios3">
+          Higher secondary
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios4" value="option4" checked={answers.question7 === 'option4'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios4">
+          Graduate
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios5" value="option5" checked={answers.question7 === 'option5'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios5">
+          Post-graduate 
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question7" id="gridRadios6" value="option6" checked={answers.question7 === 'option6'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="gridRadios6">
+          Doctoral
           </label>
         </div>
       </div>
