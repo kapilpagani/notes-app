@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import Header from './Header';
 
 
 export default function App2() {
@@ -47,6 +48,8 @@ export default function App2() {
     }
 
     return (
+      <>
+      <Header />
         <form ref={form} onSubmit={(e) => onSubmitForm(e)} className='container'>
   {/* <div className="form-group">
     <label for="exampleFormControlInput1">Email address</label>
@@ -67,20 +70,20 @@ export default function App2() {
       <legend className="col-form-label col-sm-2 pt-0">Gender</legend>
       <div className="col-sm-10">
         <div className="form-check">
-          <input className="form-check-input" type="radio" name="question3" id="gridRadios1" value="option1" checked={answers.question3 === 'option1'} onChange={(e) => handleChange(e)}/>
-          <label className="form-check-label" htmlFor="gridRadios1">
+          <input className="form-check-input" type="radio" name="question3" id="Male" value="Male" checked={answers.question3 === 'Male'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Male">
           Male 
           </label>
         </div>
         <div className="form-check">
-          <input className="form-check-input" type="radio" name="question3" id="gridRadios2" value="option2" checked={answers.question3 === 'option2'} onChange={(e) => handleChange(e)}/>
-          <label className="form-check-label" htmlFor="gridRadios2">
+          <input className="form-check-input" type="radio" name="question3" id="Female" value="Female" checked={answers.question3 === 'Female'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Female">
           Female
           </label>
         </div>
         <div className="form-check">
-          <input className="form-check-input" type="radio" name="question3" id="gridRadios3" value="option3" checked={answers.question3 === 'option3'} onChange={(e) => handleChange(e)}/>
-          <label className="form-check-label" htmlFor="gridRadios3">
+          <input className="form-check-input" type="radio" name="question3" id="Other" value="Other" checked={answers.question3 === 'Other'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Other">
           Other
           </label>
         </div>
@@ -251,6 +254,7 @@ export default function App2() {
   <input type="submit" value="Submit"  className='btn btn-primary mt-4' />
 
 </form>
+</>
 
         
   )
