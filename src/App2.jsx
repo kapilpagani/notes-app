@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import Header from './Header';
 
 
@@ -36,12 +36,12 @@ export default function App2() {
     const onSubmitForm = (event) => {
       event.preventDefault();
         console.log(answers);
-        emailjs.sendForm('service_cqibb8u', 'template_a8hiqmd', form.current, '3JRMenFFDFGdapZP5')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+      //   emailjs.sendForm('service_cqibb8u', 'template_a8hiqmd', form.current, '3JRMenFFDFGdapZP5')
+      // .then((result) => {
+      //     console.log(result.text);
+      // }, (error) => {
+      //     console.log(error.text);
+      // });
   
 
         navigate('success')
