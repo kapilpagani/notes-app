@@ -251,12 +251,31 @@ export default function App2() {
 
 
   {/* <button  className="btn btn-primary" onSubmit={(e) =>onSubmitForm(e)}>Save</button> */}
-  <div class="text-center">
-  <input type="submit" value="Submit"  className='btn btn-primary mt-4' />
-</div>
+  
   
 
 </form>
+
+<div className="text-center">
+  <button  value="Submit"  className='btn btn-primary mt-4 ' style={{marginRight: '20px'}} onClick={(e) => onSubmitForm(e)}>Submit</button>
+  <button  value="Reset"  className='btn btn-danger mt-4 ' onClick={() => setAnswers({
+        question1: '',
+        question2: '',
+        question3: '',
+        question4: '',
+        question5: '',
+        question6: '',
+        question7: '',
+        question8: '',
+        question9: '',
+        question10: '',
+        question11: '',
+        question12: '',
+        question13: '',
+        question14: '',
+        question15: '',
+    })}>Reset</button>
+</div>
 </>
 
         
