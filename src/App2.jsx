@@ -223,6 +223,108 @@ export default function App2() {
       </div>
     </div>
   </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">What is the nature of your start-up?</legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question8" id="Product" value="Product" checked={answers.question8 === 'Product'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Product">
+          Product
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question8" id="Service" value="Service" checked={answers.question8 === 'Service'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Service">
+          Service
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question8" id="Both" value="Both" checked={answers.question8 === 'Both'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Both">
+          Both
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Number of years of operation: </legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question9" id="Lessthan2years" value="Less than 2 years" checked={answers.question9 === 'Less than 2 years'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Lessthan2years">
+          Less than 2 years
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question9" id="2-5 years" value="2-5 years" checked={answers.question9 === '2-5 years'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="2-5 years">
+          2-5 years
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question9" id="5-8 years" value="5-8 years" checked={answers.question9 === '5-8 years'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="5-8 years">
+          5-8 years
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question9" id="8-10 years" value="8-10 years" checked={answers.question9 === '8-10 years'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="8-10 years">
+          8-10 years
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset className="form-group mt-3">
+    <div className="row">
+      <legend className="col-form-label col-sm-2 pt-0">Legal status of your start-up?</legend>
+      <div className="col-sm-10">
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="Sole proprietorship" value="Sole proprietorship" checked={answers.question10 === 'Sole proprietorship'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Sole proprietorship">
+          Sole proprietorship
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="Partnership" value="Partnership" checked={answers.question10 === 'Partnership'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Partnership">
+          Partnership
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="Limited liability company" value="Limited liability company" checked={answers.question10 === 'Limited liability company'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Limited liability company">
+          Limited liability company
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="Private limited company" value="Private limited company" checked={answers.question10 === 'Private limited company'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Private limited company">
+          Private limited company
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="Public limited company" value="Public limited company" checked={answers.question10 === 'Public limited company'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="Public limited company">
+          Public limited company
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="radio" name="question10" id="question10Other" value="Other" checked={answers.question10 === 'Other'} onChange={(e) => handleChange(e)}/>
+          <label className="form-check-label" htmlFor="question10Other">
+          Other
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
   {/* 
   <div className="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
